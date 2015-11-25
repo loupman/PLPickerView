@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQa-mV-UjN">
+                                <rect key="frame" x="214" y="80" width="172" height="30"/>
+                                <animations/>
+                                <state key="normal" title="ShowSinglePicker"/>
+                                <connections>
+                                    <action selector="showPickerView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m2j-s6-p3p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mto-Ac-o1h">
+                                <rect key="frame" x="224" y="118" width="152" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GrM-sg-wVr"/>
+                                    <constraint firstAttribute="width" constant="152" id="Ja2-6I-rKN"/>
+                                </constraints>
+                                <state key="normal" title="ShowTwoPicker"/>
+                                <connections>
+                                    <action selector="showTwoPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iRO-M4-EY9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7r-Mh-YeW">
+                                <rect key="frame" x="188" y="156" width="224" height="30"/>
+                                <animations/>
+                                <state key="normal" title="ShowDatePicker"/>
+                                <connections>
+                                    <action selector="showDatePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="guw-Vf-oBW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzU-uv-X2p">
+                                <rect key="frame" x="188" y="194" width="224" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224" id="pzF-hR-uav"/>
+                                </constraints>
+                                <state key="normal" title="ShowDateAndTimePicker"/>
+                                <connections>
+                                    <action selector="showDateAndTimePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eGs-8j-Z96"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eQa-mV-UjN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="2T4-vc-189"/>
+                            <constraint firstItem="x7r-Mh-YeW" firstAttribute="top" secondItem="Mto-Ac-o1h" secondAttribute="bottom" constant="8" symbolic="YES" id="5eM-zs-BmV"/>
+                            <constraint firstItem="Mto-Ac-o1h" firstAttribute="centerX" secondItem="eQa-mV-UjN" secondAttribute="centerX" id="B0k-HR-gT6"/>
+                            <constraint firstItem="UzU-uv-X2p" firstAttribute="centerX" secondItem="Mto-Ac-o1h" secondAttribute="centerX" id="Csa-Ct-rtW"/>
+                            <constraint firstItem="UzU-uv-X2p" firstAttribute="top" secondItem="x7r-Mh-YeW" secondAttribute="bottom" constant="8" id="DqB-pF-Jae"/>
+                            <constraint firstItem="eQa-mV-UjN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MH6-kY-HJO"/>
+                            <constraint firstItem="x7r-Mh-YeW" firstAttribute="trailing" secondItem="UzU-uv-X2p" secondAttribute="trailing" id="OuE-dl-qdf"/>
+                            <constraint firstItem="Mto-Ac-o1h" firstAttribute="top" secondItem="eQa-mV-UjN" secondAttribute="bottom" constant="8" symbolic="YES" id="POr-DA-KiU"/>
+                            <constraint firstItem="x7r-Mh-YeW" firstAttribute="leading" secondItem="UzU-uv-X2p" secondAttribute="leading" id="Vgt-Dy-VQD"/>
+                            <constraint firstItem="Mto-Ac-o1h" firstAttribute="top" secondItem="eQa-mV-UjN" secondAttribute="bottom" constant="8" id="eEy-CB-5Pb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UzU-uv-X2p" secondAttribute="bottom" constant="376" id="hHn-wg-Z4Y"/>
+                            <constraint firstItem="x7r-Mh-YeW" firstAttribute="top" secondItem="Mto-Ac-o1h" secondAttribute="bottom" constant="8" id="hN1-cO-iXp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="368"/>
+        </scene>
+    </scenes>
+</document>
