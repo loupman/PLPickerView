@@ -259,9 +259,13 @@
                     if (!date) {
                         date = [NSDate date];
                     }
+                    NSString *firstText = [_dataObjects[_firstSelectedColIndex] key];
+                    NSInteger sYear = [[firstText substringToIndex:firstText.length - 1] integerValue];
+                    
+                    NSInteger year = [[NSCalendar currentCalendar] component:NSCalendarUnitYear fromDate:date];
                     NSInteger month = [[NSCalendar currentCalendar] component:NSCalendarUnitMonth fromDate:date];
                     
-                    if ((row + 1) > month) {
+                    if (sYear >= year && (row + 1) > month) {
                         [_normalPicker selectRow:month-1 inComponent:1 animated:YES];
                         [pickerView reloadAllComponents];
                         return;

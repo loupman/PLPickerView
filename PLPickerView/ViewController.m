@@ -99,6 +99,7 @@
             }
             
             pickerView.selectedDate = date;
+            pickerView.allowSelectFutureDate = NO;
             pickerView.pickerViewStyle = PLPickerViewStyleBlackOpaque;
             pickerView.tag = 100+section;
             [pickerView showInView:self.view];
@@ -133,6 +134,7 @@
             }
             
             pickerView.selectedDate = date;
+            pickerView.allowSelectFutureDate = NO;
             pickerView.pickerViewStyle = PLPickerViewStyleBlackTranslucent;
             pickerView.tag = 100+section;
             [pickerView showInView:self.view];
